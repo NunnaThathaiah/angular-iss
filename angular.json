@@ -76,6 +76,9 @@
             },
             "development": {
               "buildTarget": "login-poc-iss:build:development"
+            },
+            "options": {
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
@@ -106,5 +109,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "b9b34cc2-f087-49d4-8728-38fea6f7586b"
   }
 }
