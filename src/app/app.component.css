@@ -1,0 +1,36 @@
+.width-20px{
+    width: 20px;
+}
+
+.width-150px {
+    width: 150px;
+}
+
+.width-170px {
+    width: 170px;
+}
+
+body {
+    margin: 0px auto;
+    padding: 0px;
+    background: #FFFFFF;
+    text-align: center;
+    font-family: "Open sans", arial, helvetica, sans-serif;
+    font-size: 11px;
+    min-width: 1000px;
+  }
+
+.table-styles td, .table-styles th {
+  border-bottom: 1px solid #DDD;
+  background: white;
+  border-left: none;
+  border-right: none;
+  font-size: 12px;
+  }
+
+.table-styles tr:hover{
+  background-color: transparent;
+}
+.table-styles tr {
+  border: none;
+}
