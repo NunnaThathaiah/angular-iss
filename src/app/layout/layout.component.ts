@@ -10,13 +10,17 @@ export class LayoutComponent {
 
   constructor(private router: Router) {}
 
+  isActive(route: string): boolean {
+    return this.router.url === route;
+  }
+
   navigate(item: string) {
     switch (item) {
-      case 'home':
-        this.router.navigate(['/home']);
+      case 'user-config':
+        this.router.navigate(['/user-config']);
         break;
-      case 'settings':
-        this.router.navigate(['/settings']);
+      case 'system-resources':
+        this.router.navigate(['/system-resources']);
         break;
       // Add more cases for other menu items
       default:

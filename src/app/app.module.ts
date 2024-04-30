@@ -21,6 +21,7 @@ import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { SystemResourcesComponent } from './components/system-resources/system-resources.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     UserConfigComponent,
     UserDialogComponent,
     LayoutComponent,
+    SystemResourcesComponent,
   ],
   imports: [
     BrowserModule,

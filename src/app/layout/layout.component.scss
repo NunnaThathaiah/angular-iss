@@ -18,3 +18,21 @@
   flex: 0 0 auto; // Fixed size for the spacer
 }
 
+.mat-sidenav {
+  height: 100%;
+  color: #fff !important;
+  background-color: transparent;
+}
+
+.active {
+  background-color: #1ce9bf4d;
+  color: #fff !important;
+}
+
+.mat-toolbar {
+  background-color: transparent;
+}
+
+.mat-sidenav-container {
+  background-color: transparent;
+}

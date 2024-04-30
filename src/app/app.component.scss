@@ -17,7 +17,6 @@ body {
     text-align: center;
     font-family: "Open sans", arial, helvetica, sans-serif;
     font-size: 11px;
-    min-width: 1000px;
   }
 
 .table-styles td, .table-styles th {
@@ -33,4 +32,11 @@ body {
 }
 .table-styles tr {
   border: none;
+}
+
+app-root {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
 }
