@@ -25,7 +25,7 @@ import { MatListModule } from '@angular/material/list';
     MyFormComponent,
     UserConfigComponent,
     UserDialogComponent,
-    LayoutComponent
+    LayoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,14 +35,15 @@ import { MatListModule } from '@angular/material/list';
     MatDialogModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatFormFieldModule
   ],
   providers: [
     provideClientHydration(),
     // Add the LoggingInterceptor to the providers array
     { provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptor, multi: true }
   ],
-  
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

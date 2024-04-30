@@ -9,6 +9,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 export class MyFormComponent {
   constructor(private http: HttpClient) {}
+  ngForm = {};
   onSubmit(form: any) {
     if (form.valid) {
       console.log('Form submitted:', form.value);
