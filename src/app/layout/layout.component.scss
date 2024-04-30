@@ -1,0 +1,20 @@
+.toolbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.menu-icon {
+  flex: 0 0 auto; // Fixed size for the menu icon
+}
+
+.title {
+  flex: 1; // Take up remaining space in the middle
+  text-align: center; // Center the text
+}
+
+.spacer {
+  flex: 0 0 auto; // Fixed size for the spacer
+}
+

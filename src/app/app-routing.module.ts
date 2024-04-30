@@ -3,10 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { LoginPageComponent } from './components/login/login.component';
 import { UserConfigComponent } from './components/user-config/user-config.component';
+import { LayoutComponent } from './layout/layout.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginPageComponent },
-  { path: 'user-config', component: UserConfigComponent },
+  { path: 'user-config', component: LayoutComponent },
   // Additional routes can be defined here
   { path: '', redirectTo: '/login', pathMatch: 'full' } // Default route
 ];
