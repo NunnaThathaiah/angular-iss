@@ -18,6 +18,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    BrowserAnimationsModule,
+    MatToolbarModule
   ],
   providers: [
     provideClientHydration(),
@@ -48,6 +52,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     provideAnimationsAsync()
   ],
 
+  exports: [LayoutComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
