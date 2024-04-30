@@ -1,0 +1,86 @@
+@import '../../styles/colors';
+
+.login-container {
+  color: $white;
+  background-color: $white-transparenter;
+  width: 450px;
+  height: 350px;
+
+  // todo: find a better wat to reuse styles
+  ::ng-deep {
+    .login-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      height: 100%;
+      padding: 30px 90px 20px;
+    }
+
+    .login-btn {
+      width: 75% !important;
+      height: 45px;
+      background-color: transparent;
+      border: 3px solid $glow-cyan;
+      cursor: pointer;
+      color: $glow-cyan;
+      border-radius: 50px;
+      font-size: 1.3em;
+
+      &:hover {
+        box-shadow: inset 0 0 0 2px $glow-green !important;
+      }
+    }
+  }
+}
+
+.login-form {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+  .login-wrapper {
+    width: 450px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+
+    .login-header {
+      margin-bottom: 10px;
+      height: 100px;
+      background-color: $blue-bright;
+      color: $white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      -webkit-box-shadow: 0 0 25px 1px rgba(0, 0, 0, 0.45);
+      -moz-box-shadow: 0 0 25px 1px rgba(0, 0, 0, 0.45);
+      box-shadow: 0 0 25px 1px rgba(0, 0, 0, 0.45);
+
+      .logo-wrapper {
+        width: 175px;
+        display: flex;
+        justify-content: center;
+
+        .logo {
+          background-repeat: no-repeat;
+          width: 70px;
+          height: 36px;
+          align-self: center;
+          background-size: contain;
+        }
+      }
+
+      .company-wrapper {
+        width: 100%;
+        display: flex;
+
+        .company {
+          font-size: 1.5em;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
