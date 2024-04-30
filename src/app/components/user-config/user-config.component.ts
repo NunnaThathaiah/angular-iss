@@ -8,7 +8,7 @@ import { DataService } from '../../services/data.service';
 @Component({
   selector: 'app-user-config',
   templateUrl: './user-config.component.html',
-  styleUrl: './user-config.component.css'
+  styleUrl: './user-config.component.scss'
 })
 export class UserConfigComponent implements OnInit {
   usersList: any[] = [];

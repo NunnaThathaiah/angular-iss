@@ -4,7 +4,7 @@
 // @Component({
 //   selector: 'app-user-dialog',
 //   templateUrl: './user-dialog.component.html',
-//   styleUrls: ['./user-dialog.component.css']
+//   styleUrls: ['./user-dialog.component.scss']
 // })
 // export class UserDialogComponent implements OnInit {
 
@@ -83,7 +83,7 @@ import { UserDialogUserConfigService } from '../../services/user-dialog-user-con
 @Component({
   selector: 'app-user-dialog',
   templateUrl: './user-dialog.component.html',
-  styleUrls: ['./user-dialog.component.css']
+  styleUrls: ['./user-dialog.component.scss']
 })
 export class UserDialogComponent {
   newUsername: string = '';

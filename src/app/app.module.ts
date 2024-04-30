@@ -16,6 +16,8 @@ import { LayoutComponent } from './layout/layout.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { MatListModule } from '@angular/material/list';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     MatDialogModule,
     MatSidenavModule,
     MatIconModule,
@@ -41,7 +44,8 @@ import { MatListModule } from '@angular/material/list';
   providers: [
     provideClientHydration(),
     // Add the LoggingInterceptor to the providers array
-    { provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptor, multi: true },
+    provideAnimationsAsync()
   ],
 
   bootstrap: [AppComponent]
