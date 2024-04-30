@@ -1,3 +1,4 @@
+
 body {
     margin: 0px auto;
     padding: 0px;
@@ -30,7 +31,7 @@ body {
     flex-wrap: wrap;
     margin-left: 5px;
   }
-  
+
   .col-form-label, .row-form-label {
     margin-bottom: 0;
     line-height: 1.5;
@@ -56,3 +57,19 @@ body {
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+//images.scss
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+
+@import 'reboot';
+@import 'main';
+@import 'images';
+@import 'loader';
+@import 'nvc-buttons';
+@import 'nvc-icons';
+@import 'tooltip';
+@import 'mat-inputs';
+@import 'modals';

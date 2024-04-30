@@ -12,20 +12,39 @@
       <div>
         <h2>Login</h2>
         <form (ngSubmit)="login()" #loginForm="ngForm">
-          <div>
+
+            <mat-icon matPrefix class="nvc-icon-user-circle prefix-icon"></mat-icon>
             <label for="username">Username/Email:</label>
             <input type="text" id="username" name="username" [(ngModel)]="username" required>
-          </div>
-          <div>
+
+
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" [(ngModel)]="password" required>
-          </div>
-          <button type="submit" [disabled]="loginForm.invalid">Login</button>
+
+          <button class="nvc-btn outlined secondary" type="submit" data-cy="login-button" [disabled]="loginForm.invalid">Login</button>
         </form>
         <p *ngIf="error" style="color: red;">{{ error }}</p>
       </div>
     </div>
   </div>
 </div>
+
+
+<!-- <form [formGroup]="loginForm" class="login-content" (ngSubmit)="login()">
+  <mat-form-field>
+    <mat-icon matPrefix class="nvc-icon-user-circle prefix-icon"></mat-icon>
+    <input placeholder="Enter your username or email" formControlName="username" id="login-field" matInput required />
+    <mat-error *ngIf="loginForm.get('username').errors?.required" id="username-required">
+      Username or email is required
+    </mat-error>
+  </mat-form-field>
+  <nvc-password-input
+    class="password-input"
+    theme="white"
+    formControlName="password"
+    placeholder="Enter your password"
+  ></nvc-password-input>
+  <button class="nvc-btn outlined secondary" type="submit" data-cy="login-button" [disabled]="loginForm.invalid">Log in</button>
+</form> -->
 
 

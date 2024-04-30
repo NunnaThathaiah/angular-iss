@@ -1,0 +1,76 @@
+@import 'colors';
+
+.nvc-btn {
+  width: auto;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &.primary {
+    color: $white;
+    border: 2px $text-color solid;
+    background-color: $text-color;
+
+    &:hover {
+      background-color: $purple;
+      border: 2px $purple solid;
+    }
+  }
+
+  &.secondary {
+    color: $text-color;
+    background-color: $glow-cyan;
+    border: 2px $glow-cyan solid;
+
+    &:hover {
+      background-color: $glow-cyan;
+      color: $text-color;
+    }
+  }
+
+  &.warning {
+    color: $glow-yellow;
+    border: 2px $glow-yellow solid;
+
+    &:hover {
+      background-color: $glow-yellow;
+      color: transparent;
+    }
+  }
+
+  &.outlined {
+    background-color: transparent;
+
+    &.primary {
+      color: $text-color;
+      border: 2px $text-color solid;
+
+      &:hover {
+        background-color: $white-blue;
+      }
+    }
+
+    &.secondary {
+      color: $glow-cyan;
+      border: 2px $glow-cyan solid;
+
+      &:hover {
+        background-color: $glow-cyan;
+        color: $text-color;
+      }
+    }
+
+    &.warning {
+      color: $text-color;
+      border: 2px $text-color solid;
+      background-color: $glow-yellow;
+
+      &:hover {
+        color: $text-color;
+        background-color: $grey-lighter-1;
+        border: 2px $text-color solid;
+      }
+    }
+  }
+}

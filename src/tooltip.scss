@@ -1,0 +1,57 @@
+@import 'colors';
+
+$tooltip-border-radius: 5px;
+
+// todo: implement consistent tooltips across the whole app
+.tooltip {
+  pointer-events: none;
+  .tooltip-arrow::before {
+    border-color: transparent;
+  }
+
+  .tooltip-inner {
+    background: $white;
+    color: $text-color;
+    font-size: 12px;
+    border-radius: $tooltip-border-radius;
+    box-shadow: 0px 0px 10px 0px $tooltip-shadow-color;
+  }
+
+  &.wide {
+    .tooltip-inner {
+      max-width: unset;
+    }
+  }
+
+  &.hoverable {
+    pointer-events: auto;
+  }
+
+  &.header-tooltip {
+    padding: 0;
+
+    .tooltip-inner {
+      max-width: calc(33vw - 40px);
+    }
+  }
+
+  &.align-left {
+    .tooltip-inner {
+      text-align: left;
+    }
+  }
+
+  &.show {
+    opacity: 1;
+  }
+}
+
+mat-tooltip-component {
+  .mat-tooltip {
+    background-color: $white;
+    color: $text-color;
+    font-size: 12px;
+    box-shadow: 0px 0px 10px 0px $tooltip-shadow-color;
+    border-radius: $tooltip-border-radius;
+  }
+}

@@ -1,0 +1,23 @@
+/**
+  This is a shared style barrel file
+  It's included into apps via project.json -> styles property
+
+  The style files from this folder are mean to be included only once and without encapsulation
+  They are not designed to be imported anywhere else
+
+  The importable styles (e.g. colors, variables) are stored in the "importable" folder
+ */
+
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import 'ngx-toastr/toastr.css';
+
+@import 'reboot';
+@import 'main';
+@import 'images';
+@import 'loader';
+@import 'nvc-buttons';
+@import 'nvc-icons';
+@import 'tooltip';
+@import 'mat-inputs';
+@import 'modals';

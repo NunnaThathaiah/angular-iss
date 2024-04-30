@@ -1,4 +1,4 @@
-@import '../../styles/colors';
+@import '../../../colors';
 
 .login-container {
   color: $white;
@@ -83,4 +83,55 @@
       }
     }
   }
+}
+
+:host {
+  input:-internal-autofill-selected {
+    background-color: transparent !important;
+  }
+}
+
+.login-right-align {
+  text-align: right;
+}
+
+input.login-right-align::-webkit-outer-spin-button,
+input.login-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+.nvc-icon-user-circle::before {
+  font-size: 34px;
+  top: 3px;
+  position: absolute;
+  color: $glow-cyan;
+}
+
+.prefix-icon.material-icons,
+.prefix-icon.material-icons.mat-icon {
+  margin: 0 10px -15px 0;
+  width: 1.7em;
+  height: 1.7em;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.login-error-message {
+  max-height: 400px;
+  overflow-y: auto;
+  color: $white;
+  text-align: center;
+  background: $pink;
+  padding: 5px 0;
+}
+
+.password-input {
+  width: 100%;
+}
+
+.nvc-btn {
+  width: 100%;
+  height: 50px;
 }

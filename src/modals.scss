@@ -1,0 +1,481 @@
+@import 'colors';
+
+.nvc-error .mat-dialog-container,
+.no-padding .mat-dialog-container {
+  padding: 0 !important;
+  border-radius: 7px;
+  overflow: hidden !important;
+}
+
+.no-scroll .mat-dialog-container {
+  overflow: hidden;
+}
+
+.modal-content {
+  border-radius: 7px;
+  border: none;
+  background-color: $white !important;
+  overflow: hidden;
+
+  &.info-modal {
+    width: 620px;
+  }
+
+  &.standard {
+    width: 350px;
+  }
+
+  :host {
+    background-color: $white-transparent;
+    border-radius: 7px;
+  }
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+  padding: 15px 0;
+  cursor: move;
+  border-bottom: 1px solid $text-color;
+
+  .modal-title {
+    font-size: 18px;
+    color: $text-color;
+    text-transform: uppercase;
+
+    .warning {
+      color: $orange;
+      text-transform: none;
+      font-size: 15px;
+    }
+  }
+}
+
+.modal-body {
+  padding: 15px;
+
+  .criteria-wrapper {
+    & ~ label {
+      margin: 10px 0;
+    }
+
+    .align-row {
+      margin: 0 auto;
+
+      .form-check-inline {
+        margin-left: 1.05rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  padding: 10px;
+  align-items: center;
+  background-color: $text-color;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  .nvc-btn {
+    min-width: 100px;
+  }
+}
+
+.form-group {
+  position: relative;
+
+  &.row {
+    margin-bottom: 0;
+    margin-right: unset;
+  }
+
+  .form-control {
+    border-radius: 0;
+    padding: 0.5rem 0;
+  }
+
+  select,
+  input {
+    background-color: transparent;
+    margin: 0 auto;
+    color: $text-color;
+    outline: none;
+  }
+
+  textarea {
+    border: 2px solid $text-color;
+    background-color: transparent;
+    padding: 10px !important;
+    color: $text-color;
+    resize: none !important;
+  }
+
+  select {
+    cursor: pointer;
+  }
+
+  input[type='radio'] {
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    height: 1px;
+    opacity: 0;
+  }
+
+  input[type='number'] {
+    height: 38px;
+  }
+
+  input[type='file'] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+
+    &.validation {
+      & ~ span {
+        display: block;
+      }
+
+      & ~ label {
+        background-color: $error-red;
+      }
+    }
+
+    & ~ label {
+      background-color: $text-color;
+      cursor: pointer;
+      color: $white !important;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: $purple;
+      }
+    }
+  }
+
+  label {
+    color: $text-color;
+
+    &.label-bold {
+      font-weight: 700;
+
+      &.col {
+        margin: 0;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2.3px solid transparent;
+        align-self: center;
+      }
+    }
+
+    &.form-check-label {
+      cursor: pointer;
+
+      span {
+        margin-left: 16px;
+      }
+
+      span::before {
+        content: '';
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        vertical-align: 0;
+        border-radius: 1em;
+        border: 0.125em solid $white-transparent;
+        box-shadow: 0 0 0 0.15em $text-color;
+        transition: 0.5s ease all;
+        position: absolute;
+        left: -0.5px;
+        bottom: 6px;
+      }
+
+      [type='radio']:checked + span::before {
+        background: $text-color;
+      }
+    }
+  }
+
+  .form-check-inline {
+    margin-left: 0.75rem;
+  }
+}
+
+.checkbox-panel {
+  align-items: flex-end;
+  padding-bottom: 2.3px;
+}
+
+.control {
+  padding-top: 0;
+}
+
+.right-20 {
+  right: 20px;
+}
+
+//TODO: clean
+.placeholder {
+  font-size: 15px;
+
+  ::-webkit-input-placeholder {
+    font-size: 15px;
+  }
+
+  ::-moz-placeholder {
+    font-size: 15px;
+  }
+
+  :-ms-input-placeholder {
+    font-size: 15px;
+  }
+
+  :-moz-placeholder {
+    font-size: 15px;
+  }
+}
+
+// TODO: clean
+.custom-mb {
+  margin-bottom: 33px;
+}
+
+// TODO: clean
+.block {
+  display: block;
+  margin-bottom: 15px;
+}
+
+// TODO: clean
+.bottom-align {
+  transform: translate(0%, 43%);
+}
+
+// TODO: clean
+.control {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 6px;
+  padding-top: 3px;
+  cursor: pointer;
+  font-size: 16px;
+
+  input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    &:checked ~ .control_indicator {
+      background: rgba(0, 0, 0, 0);
+
+      &::after {
+        display: block;
+      }
+    }
+  }
+
+  .control_indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: rgba(0, 0, 0, 0);
+    border: 2px solid $text-color;
+
+    &::after {
+      box-sizing: unset;
+      content: '';
+      position: absolute;
+      display: none;
+    }
+  }
+
+  &-checkbox .control_indicator::after {
+    left: 9px;
+    top: -5px;
+    width: 7px;
+    height: 16px;
+    border: solid $text-color;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+}
+
+.sourceInput,
+.destinationInput {
+  z-index: 1;
+  opacity: 1;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  margin: 0 auto;
+  border-bottom: 2.3px solid $text-color;
+  color: $text-color;
+  padding: 0.5rem 0;
+  outline: none;
+}
+
+.tcp-header {
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+
+.bg {
+  background-color: $white;
+}
+
+.pd-10 {
+  padding: 0 10px;
+}
+
+.offset-number {
+  position: relative;
+
+  span {
+    position: absolute;
+    bottom: 9px;
+    left: -20px;
+    color: $text-color;
+    font-weight: 700;
+  }
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 85px;
+  background-color: $black;
+  color: $white;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  top: -35px;
+  right: 15px;
+  font-size: 10px;
+}
+
+.align-icon {
+  text-align: center;
+}
+
+.radio-style {
+  display: block;
+
+  p {
+    color: $text-color;
+    font-weight: 700;
+    font-size: 16px;
+    display: inline-block;
+    margin-right: 35px;
+  }
+
+  .radio {
+    display: inline;
+
+    label {
+      color: $text-color;
+      cursor: pointer;
+    }
+
+    input {
+      box-sizing: border-box;
+      padding: 0;
+      border: 0;
+      height: 1px;
+      opacity: 0;
+    }
+
+    span {
+      margin-left: 5px;
+      position: relative;
+    }
+
+    span::before {
+      content: '';
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      vertical-align: 0;
+      border-radius: 1em;
+      border: 0.125em solid $white-transparent;
+      box-shadow: 0 0 0 0.15em $text-color;
+      transition: 0.5s ease all;
+      position: absolute;
+      left: -25.5px;
+      top: 1px;
+    }
+
+    [type='radio']:checked ~ span::before {
+      background: $text-color;
+    }
+  }
+
+  .col-4 {
+    display: inline;
+  }
+}
+
+.file-invalid {
+  font-size: 14px;
+  color: $error-red;
+  left: 5%;
+  bottom: 15px;
+  display: block;
+}
+
+.error-wrapper {
+  .red-dot {
+    position: absolute;
+    font-size: 22px;
+    color: $pink;
+    left: unset;
+    top: unset;
+    right: 10px;
+    bottom: 0;
+  }
+
+  .help-block {
+    color: $pink;
+    position: absolute;
+    font-size: 12px;
+    z-index: 36;
+    background-color: $white;
+    border: 1px solid $grey-lighter;
+    padding: 7px;
+    width: 100%;
+
+    .error-message {
+      text-align: left;
+      font-size: 14px;
+      color: $pink;
+      display: block;
+    }
+  }
+}
+
+.modal {
+  z-index: 1051;
+}
+
+.mat-sort-header-content {
+  border: none;
+  background: 0 0;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  cursor: inherit;
+  outline: 0;
+  font: inherit;
+  color: currentColor;
+}

@@ -1,0 +1,321 @@
+@font-face {
+  font-family: 'nvc-icons';
+  src: url(/src/app/nvc-icons/fonts/nvc-icons.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.nvc-icon-spin {
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+[class^='nvc-icon-'],
+[class*=' nvc-icon-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'nvc-icons' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nvc-icon-license:before {
+  content: '\e95c';
+}
+.nvc-icon-arrow-right-output:before {
+  content: '\e95b';
+}
+.nvc-icon-arrow-right-input:before {
+  content: '\e95a';
+}
+.nvc-icon-arrow-right-solid:before {
+  content: '\e959';
+}
+.nvc-icon-table-view:before {
+  content: '\e958';
+}
+.nvc-icon-first-page:before {
+  content: '\e956';
+}
+.nvc-icon-last-page:before {
+  content: '\e957';
+}
+.nvc-icon-port-group:before {
+  content: '\e955';
+}
+.nvc-icon-config-management:before {
+  content: '\e954';
+}
+.nvc-icon-device-fixed:before {
+  content: '\e94c';
+}
+.nvc-icon-auth-list:before {
+  content: '\e94d';
+}
+.nvc-icon-topology-view:before {
+  content: '\e94e';
+}
+.nvc-icon-plus-circle:before {
+  content: '\e94f';
+}
+.nvc-icon-plus1:before {
+  content: '\e950';
+}
+.nvc-icon-device-in-access:before {
+  content: '\e951';
+}
+.nvc-icon-syslog:before {
+  content: '\e952';
+}
+.nvc-icon-reboot:before {
+  content: '\e953';
+}
+.nvc-icon-access-by-criteria:before {
+  content: '\e948';
+}
+.nvc-icon-deny-by-criteria:before {
+  content: '\e949';
+}
+.nvc-icon-deny-all:before {
+  content: '\e94a';
+}
+.nvc-icon-access-all:before {
+  content: '\e94b';
+}
+.nvc-icon-filter-settings:before {
+  content: '\e947';
+}
+.nvc-icon-chart-area:before {
+  content: '\e946';
+}
+.nvc-icon-refresh:before {
+  content: '\e933';
+}
+.nvc-icon-power:before {
+  content: '\e939';
+}
+.nvc-icon-interconnected:before {
+  content: '\e944';
+}
+.nvc-icon-loopback:before {
+  content: '\e945';
+}
+.nvc-icon-push-to:before {
+  content: '\e942';
+}
+.nvc-icon-download:before {
+  content: '\e943';
+}
+.nvc-icon-download2:before {
+  content: '\e95d';
+}
+.nvc-icon-warning-circle-filled:before {
+  content: '\e92d';
+}
+.nvc-icon-levels-settings-circle:before {
+  content: '\e92c';
+}
+.nvc-icon-firmware-push:before {
+  content: '\e941';
+}
+.nvc-icon-calendar:before {
+  content: '\e92e';
+}
+.nvc-icon-angle-up:before {
+  content: '\e932';
+}
+.nvc-icon-angle-down:before {
+  content: '\e937';
+}
+.nvc-icon-angle-left:before {
+  content: '\e93e';
+}
+.nvc-icon-angle-right:before {
+  content: '\e93f';
+}
+.nvc-icon-trash:before {
+  content: '\e940';
+}
+.nvc-icon-close:before {
+  content: '\e93c';
+}
+.nvc-icon-ok:before {
+  content: '\e93d';
+}
+.nvc-icon-setting-filled:before {
+  content: '\e93b';
+}
+.nvc-icon-port:before {
+  content: '\e93a';
+}
+.nvc-icon-group-circle:before {
+  content: '\e930';
+}
+.nvc-icon-info-circle-filled:before {
+  content: '\e936';
+}
+.nvc-icon-edit-pencil:before {
+  content: '\e938';
+}
+.nvc-icon-lock-circle:before {
+  content: '\e908';
+}
+.nvc-icon-radar:before {
+  content: '\e92b';
+}
+.nvc-icon-close-circle:before {
+  content: '\e92f';
+}
+.nvc-icon-plus:before {
+  content: '\e931';
+}
+.nvc-icon-navigation-out:before {
+  content: '\e934';
+}
+.nvc-icon-user-circle:before {
+  content: '\e935';
+}
+.nvc-icon-info-circle:before {
+  content: '\e92a';
+}
+.nvc-icon-settings:before {
+  content: '\e929';
+}
+.nvc-icon-closed-eye:before {
+  content: '\e928';
+}
+.nvc-icon-nav:before {
+  content: '\e927';
+}
+.nvc-icon-navigation:before {
+  content: '\e926';
+}
+.nvc-icon-device:before {
+  content: '\e902';
+}
+.nvc-icon-eye:before {
+  content: '\e924';
+}
+.nvc-icon-edit:before {
+  content: '\e925';
+}
+.nvc-icon-cisco-a:before {
+  content: '\e900';
+}
+.nvc-icon-cisco-b:before {
+  content: '\e901';
+}
+.nvc-icon-done:before {
+  content: '\e903';
+}
+.nvc-icon-fabric-flow:before {
+  content: '\e904';
+}
+.nvc-icon-firewall:before {
+  content: '\e905';
+}
+.nvc-icon-fixed:before {
+  content: '\e906';
+}
+.nvc-icon-fixed-broker:before {
+  content: '\e907';
+}
+.nvc-icon-history:before {
+  content: '\e909';
+}
+.nvc-icon-ids:before {
+  content: '\e90c';
+}
+.nvc-icon-ips:before {
+  content: '\e90d';
+}
+.nvc-icon-link:before {
+  content: '\e90e';
+}
+.nvc-icon-lock:before {
+  content: '\e90f';
+}
+.nvc-icon-modular:before {
+  content: '\e910';
+}
+.nvc-icon-monitoring:before {
+  content: '\e911';
+}
+.nvc-icon-n2:before {
+  content: '\e912';
+}
+.nvc-icon-network-tap:before {
+  content: '\e913';
+}
+.nvc-icon-niagara-broker:before {
+  content: '\e914';
+}
+.nvc-icon-niagara-bypass:before {
+  content: '\e915';
+}
+.nvc-icon-paloalto:before {
+  content: '\e916';
+}
+.nvc-icon-PB:before {
+  content: '\e917';
+}
+.nvc-icon-performance:before {
+  content: '\e918';
+}
+.nvc-icon-router-a:before {
+  content: '\e919';
+}
+.nvc-icon-router-b:before {
+  content: '\e91a';
+}
+.nvc-icon-display-search:before {
+  content: '\e91b';
+}
+.nvc-icon-search:before {
+  content: '\e91c';
+}
+.nvc-icon-server:before {
+  content: '\e91d';
+}
+.nvc-icon-shield:before {
+  content: '\e91e';
+}
+.nvc-icon-siem:before {
+  content: '\e91f';
+}
+.nvc-icon-ssl:before {
+  content: '\e920';
+}
+.nvc-icon-switch:before {
+  content: '\e921';
+}
+.nvc-icon-symantec:before {
+  content: '\e922';
+}
+.nvc-icon-tap:before {
+  content: '\e923';
+}
+.nvc-icon-tap3225:before {
+  content: '\e90a';
+}
+.nvc-icon-wireshark:before {
+  content: '\e90b';
+}
