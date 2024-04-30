@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-login',
@@ -13,15 +14,15 @@ export class LoginPageComponent {
   error: string = '';
 
   constructor(
-    private http: HttpClient,
-    private router: Router) {}
+    private router: Router,
+    private dataService: DataService) {}
 
   login() {
     const url = 'pm/1.2/login';
-    const body = { username: this.username, password: this.password };
+    const data = { username: this.username, password: this.password };
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
     console.log(`url request ${url}`);
-    this.http.post(url, body, { headers, observe: 'response' }).subscribe(
+    this.dataService.create(url, data, { headers, observe: 'response', withCredentials: true}).subscribe(
       (response) => {
         // Handle successful login response
         console.log('Login successful');

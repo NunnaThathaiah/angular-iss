@@ -1,8 +1,9 @@
 import { Component, OnInit} from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
-import { UserDialogComponent } from '../user-dialog/user-dialog.component';
+import { UserDialogService } from '../../services/user-dialog.service';
+import { UserDialogUserConfigService } from '../../services/user-dialog-user-config.service';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-user-config',
@@ -11,13 +12,23 @@ import { UserDialogComponent } from '../user-dialog/user-dialog.component';
 })
 export class UserConfigComponent implements OnInit {
   usersList: any[] = [];
-  constructor(private http: HttpClient, private router: Router, public dialog: MatDialog) { }
+  constructor(
+    private dataService: DataService,
+    private router: Router,
+    public dialog: MatDialog,
+    private userDialogUserConfigService: UserDialogUserConfigService,
+    private userDialogService: UserDialogService
+  ) { }
 
   ngOnInit(): void {
     this.fetchUserData();
+    // Subscribe to update user list event
+    this.userDialogUserConfigService.updateUserList$.subscribe(() => {
+      this.fetchUserData();
+    });
   }
   fetchUserData() {
-    this.http.get<any>('pm/1.2/users').subscribe(
+    this.dataService.read('pm/1.2/users').subscribe(
       (data) => {
         this.usersList = data.response.webObjects; // Assign response data to the usersList property
         this.renderTable(); // Call the method to render table after fetching data
@@ -65,14 +76,7 @@ export class UserConfigComponent implements OnInit {
   }
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(UserDialogComponent, {
-      width: '400px',
-      data: { /* You can pass data to the dialog if needed */ }
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      // Handle dialog close event if needed
-    });
+    // Open dialog using the service
+    this.userDialogService.openDialog();
   }
 }

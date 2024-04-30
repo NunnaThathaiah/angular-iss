@@ -1,5 +1,8 @@
 {
     "/pm": {
-      "target": "http://172.17.0.3"
+      "target": "http://172.17.0.3",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
     }
 }
