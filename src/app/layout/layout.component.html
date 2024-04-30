@@ -1,0 +1,17 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="side">
+      <mat-nav-list>
+        <a mat-list-item (click)="navigate('home')">Home</a>
+        <a mat-list-item (click)="navigate('settings')">Settings</a>
+        <!-- Add more menu items as needed -->
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <!-- Include the user-config component -->
+      <app-user-config></app-user-config>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  

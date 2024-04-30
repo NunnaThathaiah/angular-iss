@@ -12,6 +12,10 @@ import { LoggingInterceptor } from './components/login/http-intercepter';
 import { MyFormComponent } from './my-form/my-form.component';
 import { UserConfigComponent } from './components/user-config/user-config.component';
 import { UserDialogComponent } from './components/user-dialog/user-dialog.component';
+import { LayoutComponent } from './layout/layout.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,8 @@ import { UserDialogComponent } from './components/user-dialog/user-dialog.compon
     HomeComponent,
     MyFormComponent,
     UserConfigComponent,
-    UserDialogComponent
+    UserDialogComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,9 @@ import { UserDialogComponent } from './components/user-dialog/user-dialog.compon
     FormsModule,
     HttpClientModule,
     MatDialogModule,
-    MatFormFieldModule
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [
     provideClientHydration(),
