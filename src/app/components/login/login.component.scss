@@ -100,7 +100,8 @@ input.login-right-align::-webkit-inner-spin-button {
   display: none;
 }
 
-.nvc-icon-user-circle::before {
+.nvc-icon-user-circle::before,
+.nvc-icon-lock-circle::before {
   font-size: 34px;
   top: 3px;
   position: absolute;
@@ -134,4 +135,5 @@ input.login-right-align::-webkit-inner-spin-button {
 .nvc-btn {
   width: 100%;
   height: 50px;
+  margin-top: 2em;
 }

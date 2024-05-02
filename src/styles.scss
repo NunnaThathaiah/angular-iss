@@ -1,65 +1,53 @@
 
-body {
-    margin: 0px auto;
-    padding: 0px;
-    background: #FFFFFF;
-    text-align: center;
-    font-family: "Open sans", arial, helvetica, sans-serif;
-    font-size: 11px;
-    width: 100%;
-  }
 
-.table-styles td, .table-styles th {
-  border-bottom: 1px solid #DDD;
-  background: rgb(252, 252, 253);
-  border-left: none;
-  border-right: none;
-  font-size: 12px;
-  }
+// .table-styles td, .table-styles th {
+//   border-bottom: 1px solid #DDD;
+//   background: rgb(252, 252, 253);
+//   border-left: none;
+//   border-right: none;
+//   font-size: 12px;
+//   }
 
-.table-styles tr:hover{
-  background-color: transparent;
-}
-.table-styles tr {
-  border: none;
-}
+// .table-styles tr:hover{
+//   background-color: transparent;
+// }
+// .table-styles tr {
+//   border: none;
+// }
 
-.flex-row {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-left: 5px;
-  }
+// .flex-row {
+//     display: -ms-flexbox;
+//     display: flex;
+//     -ms-flex-wrap: wrap;
+//     flex-wrap: wrap;
+//     margin-left: 5px;
+//   }
 
-  .col-form-label, .row-form-label {
-    margin-bottom: 0;
-    line-height: 1.5;
-    width: 50%;
-    max-width: 50%;
-    font-family: "Lucida Grande", arial, helvetica, sans-serif;
-    font-size: 15px !important;
-  }
+//   .col-form-label, .row-form-label {
+//     margin-bottom: 0;
+//     line-height: 1.5;
+//     width: 50%;
+//     max-width: 50%;
+//     font-family: "Lucida Grande", arial, helvetica, sans-serif;
+//     font-size: 15px !important;
+//   }
 
-.hide_display {
-    display: none !important;
-}
-.width-20px{
-    width: 20px;
-}
+// .hide_display {
+//     display: none !important;
+// }
+// .width-20px{
+//     width: 20px;
+// }
 
-.width-150px {
-    width: 150px;
-}
+// .width-150px {
+//     width: 150px;
+// }
 
-.width-170px {
-    width: 170px;
-}
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// .width-170px {
+//     width: 170px;
+// }
 
 
-//images.scss
 @import 'bootstrap/dist/css/bootstrap.min.css';
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
 
@@ -73,3 +61,22 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 @import 'tooltip';
 @import 'mat-inputs';
 @import 'modals';
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background: none !important;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before ,
+.mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-floating-label, .mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-floating-label--float-above,
+.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-floating-label, .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-floating-label--float-above{
+  color: #6fe8cf !important;
+  border-bottom-color: #6fe8cf !important;;
+}
+
+.mat-mdc-form-field-focus-overlay {
+  background: none !important;
+}
+
+.mdc-text-field__input {
+  color: white !important;
+}

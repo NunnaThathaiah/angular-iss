@@ -1,80 +1,80 @@
 @import 'colors';
 
-.mat-checkbox {
-  .mat-checkbox-frame {
+.mat-mdc-checkbox {
+  .mat-mdc-checkbox-frame {
     border-color: $dirty-blue;
     border-radius: 0;
   }
 
-  .mat-checkbox-layout {
+  .mat-mdc-checkbox-layout {
     margin-bottom: 0 !important;
   }
 
-  .mat-checkbox-inner-container {
+  .mat-mdc-checkbox-inner-container {
     height: 19px !important;
     width: 19px !important;
   }
 
-  &-checked.mat-accent:not(.mat-checkbox-disabled),
-  &-indeterminate.mat-accent:not(.mat-checkbox-disabled) {
-    .mat-checkbox-background {
+  &-checked.mat-mdc-accent:not(.mat-mdc-checkbox-disabled),
+  &-indeterminate.mat-mdc-accent:not(.mat-mdc-checkbox-disabled) {
+    .mat-mdc-checkbox-background {
       background-color: $dirty-blue;
     }
   }
 
   &.dark {
-    .mat-checkbox-background {
+    .mat-mdc-checkbox-background {
       background: $dirty-blue;
     }
 
-    .mat-checkbox-layout {
+    .mat-mdc-checkbox-layout {
       border: 1px solid $white;
     }
   }
 }
 
-.mat-radio-button {
-  & ~ .mat-radio-button {
+.mat-mdc-radio-button {
+  & ~ .mat-mdc-radio-button {
     margin-left: 16px;
   }
 
-  &.mat-accent {
-    &:not(.mat-radio-disabled) {
-      .mat-radio-inner-circle {
+  &.mat-mdc-accent {
+    &:not(.mat-mdc-radio-disabled) {
+      .mat-mdc-radio-inner-circle {
         background-color: $dirty-blue;
       }
 
-      &.mat-radio-checked .mat-radio-outer-circle {
+      &.mat-mdc-radio-checked .mat-mdc-radio-outer-circle {
         border-color: $dirty-blue;
       }
     }
 
-    .mat-radio-ripple .mat-ripple-element {
+    .mat-mdc-radio-ripple .mat-mdc-ripple-element {
       background-color: $dirty-blue !important;
     }
   }
 }
 
-.mat-radio-outer-circle {
+.mat-mdc-radio-outer-circle {
   border-color: $dirty-blue;
 }
 
 .select-show-columns {
-  .mat-form-field {
-    .mat-select-arrow,
-    .mat-form-field-label,
-    .mat-select-value,
-    .mat-select,
-    .mat-input-element {
+  .mat-mdc-form-field {
+    .mat-mdc-select-arrow,
+    .mat-mdc-form-field-label,
+    .mat-mdc-select-value,
+    .mat-mdc-select,
+    .mat-mdc-input-element {
       color: $glow-cyan !important;
       caret-color: $glow-cyan !important;
     }
 
-    .mat-form-field-underline {
+    .mat-mdc-form-field-underline {
       background-color: $glow-cyan !important;
     }
 
-    &.mat-focused.ng-valid .mat-form-field-ripple {
+    &.mat-mdc-focused.ng-valid .mat-mdc-form-field-ripple {
       background-color: $glow-cyan !important;
     }
   }
@@ -85,25 +85,25 @@
 .columns-option {
   padding-left: 0 !important;
 
-  .mat-option-pseudo-checkbox {
+  .mat-mdc-option-pseudo-checkbox {
     display: none;
   }
 
-  &.mat-option {
+  &.mat-mdc-option {
     color: $text-color;
 
-    .mat-option-text {
+    .mat-mdc-option-text {
       padding: 5px 5px 5px 30px;
       border-bottom: 1px solid $light-grey;
     }
 
-    &.mat-active {
+    &.mat-mdc-active {
       background: transparent;
     }
   }
 
-  &.mat-selected {
-    .mat-option {
+  &.mat-mdc-selected {
+    .mat-mdc-option {
       color: $text-color;
 
       &-text {
@@ -111,31 +111,31 @@
         border-left: 10px solid $glow-cyan;
       }
 
-      &.mat-active {
+      &.mat-mdc-active {
         background: none;
       }
     }
 
-    &:not(.mat-option-disabled) {
+    &:not(.mat-mdc-option-disabled) {
       color: $text-color !important;
     }
 
-    &.mat-option-disabled {
+    &.mat-mdc-option-disabled {
       color: $light-grey;
     }
   }
 }
 
 // required asterics on focus
-.mat-focused .mat-form-field-required-marker {
+.mat-mdc-focused .mat-mdc-form-field-required-marker {
   color: inherit;
 }
 
 /**
 word-wrap for filter with long value
  */
-.mat-select {
-  .mat-select-trigger {
+.mat-mdc-select {
+  .mat-mdc-select-trigger {
     height: unset;
     word-break: break-word;
   }
@@ -144,21 +144,21 @@ word-wrap for filter with long value
 /**
 changes default form colors into blue
 */
-.mat-form-field {
-  .mat-select-arrow,
-  .mat-form-field-label,
-  .mat-select-value,
-  .mat-select,
-  .mat-input-element {
+.mat-mdc-form-field {
+  .mat-mdc-select-arrow,
+  .mat-mdc-form-field-label,
+  .mat-mdc-select-value,
+  .mat-mdc-select,
+  .mat-mdc-input-element {
     color: $text-color;
     caret-color: $text-color;
   }
 
-  .mat-form-field-underline {
+  .mat-mdc-form-field-underline {
     background-color: $text-color;
   }
 
-  &.mat-focused.ng-valid .mat-form-field-ripple {
+  &.mat-mdc-focused.ng-valid .mat-mdc-form-field-ripple {
     background-color: $text-color;
   }
 }
@@ -167,58 +167,62 @@ changes default form colors into blue
 form with white background, red errors
 */
 .red-errors-form {
-  .mat-form-field-invalid .mat-input-element,
-  .mat-warn .mat-input-element {
+  .mat-mdc-form-field-invalid .mat-mdc-input-element,
+  .mat-mdc-warn .mat-mdc-input-element {
     caret-color: $error-red;
   }
 
-  .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+  .mat-mdc-form-field.mat-mdc-form-field-invalid .mat-mdc-form-field-label {
     color: $error-red !important;
   }
 
-  .mat-form-field {
-    &.mat-focused.ng-invalid:not(.ng-pristine) .mat-form-field-ripple {
+  .mat-mdc-form-field {
+    &.mat-mdc-focused.ng-invalid:not(.ng-pristine) .mat-mdc-form-field-ripple {
       background-color: $error-red;
     }
   }
 
-  .mat-form-field.mat-form-field-invalid .mat-form-field-ripple,
-  .mat-form-field.mat-form-field-invalid .mat-form-field-ripple.mat-accent {
+  .mat-mdc-form-field.mat-mdc-form-field-invalid .mat-mdc-form-field-ripple,
+  .mat-mdc-form-field.mat-mdc-form-field-invalid .mat-mdc-form-field-ripple.mat-mdc-accent {
     background-color: $error-red;
   }
 
-  .mat-error {
+  .mat-mdc-error {
     color: $error-red;
   }
 }
 
 .white-form {
-  .mat-select-arrow,
-  .mat-form-field-label,
-  .mat-select-value,
-  .mat-select,
-  .mat-input-element {
+  .mat-mdc-select-arrow,
+  .mat-mdc-form-field-label,
+  .mat-mdc-select-value,
+  .mat-mdc-select,
+  .mat-mdc-input-element {
     color: $white;
     caret-color: $white;
   }
 
-  .mat-option-text {
+  .mat-mdc-option-text {
     padding: 5px 5px 5px 30px;
     border-bottom: 1px solid $white;
   }
 
-  .mat-form-field-underline,
-  .mat-form-field-ripple {
+  .mat-mdc-form-field-underline,
+  .mat-mdc-form-field-ripple,
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before{
     background-color: $white !important;
+    border-bottom-color: #6fe8cf;
+    margin-left: 2.9em;
+    width: 83%;
   }
 
-  .mat-form-field {
-    &:not(.mat-form-field-invalid).mat-focused {
-      .mat-form-field-ripple {
+  .mat-mdc-form-field {
+    &:not(.mat-mdc-form-field-invalid).mat-mdc-focused {
+      .mat-mdc-form-field-ripple {
         background-color: $white;
       }
 
-      .mat-form-field-label {
+      .mat-mdc-form-field-label {
         color: $white;
       }
     }
@@ -229,45 +233,45 @@ form with white background, red errors
 overriding material form styles as in this file they apply in the right order
 */
 .login-container {
-  .mat-form-field-appearance-legacy {
-    .mat-form-field-label {
+  .mat-mdc-form-field-appearance-legacy {
+    .mat-mdc-form-field-label {
       color: $glow-cyan;
     }
 
-    .mat-form-field-underline {
+    .mat-mdc-form-field-underline {
       background-color: $glow-cyan;
       margin-left: 2.9em;
       width: 83%;
     }
   }
 
-  .mat-form-field {
-    &.mat-focused.ng-valid .mat-form-field-ripple {
+  .mat-mdc-form-field {
+    &.mat-mdc-focused.ng-valid .mat-mdc-form-field-ripple {
       background-color: $glow-cyan;
     }
   }
 
-  .mat-form-field .mat-form-field-ripple,
-  .mat-form-field .mat-form-field-ripple.mat-accent {
+  .mat-mdc-form-field .mat-mdc-form-field-ripple,
+  .mat-mdc-form-field .mat-mdc-form-field-ripple.mat-mdc-accent {
     background-color: $glow-cyan;
   }
 
-  .mat-form-field.mat-form-field-invalid .mat-form-field-ripple,
-  .mat-form-field.mat-form-field-invalid .mat-form-field-ripple.mat-accent {
+  .mat-mdc-form-field.mat-mdc-form-field-invalid .mat-mdc-form-field-ripple,
+  .mat-mdc-form-field.mat-mdc-form-field-invalid .mat-mdc-form-field-ripple.mat-mdc-accent {
     background-color: $yellow;
   }
 
-  .mat-form-field-appearance-legacy .mat-form-field-subscript-wrapper {
+  .mat-mdc-form-field-appearance-legacy .mat-mdc-form-field-subscript-wrapper {
     margin-left: 3.9em;
   }
 
-  .mat-form-field-label .mat-form-field-required-marker,
-  .mat-form-field-label.mat-accent {
+  .mat-mdc-form-field-label .mat-mdc-form-field-required-marker,
+  .mat-mdc-form-field-label.mat-mdc-accent {
     display: none;
   }
 
-  .mat-input-element,
-  .mat-warn .mat-input-element {
+  .mat-mdc-input-element,
+  .mat-mdc-warn .mat-mdc-mdc-input-element {
     caret-color: $glow-cyan;
     color: $white;
   }
@@ -275,7 +279,7 @@ overriding material form styles as in this file they apply in the right order
 
 // select panel
 .panel {
-  .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+  .mat-mdc-form-field-appearance-legacy.mat-mdc-form-field-can-float.mat-mdc-form-field-should-float .mat-mdc-form-field-label {
     margin-top: 5px;
   }
 
@@ -290,17 +294,17 @@ mat-header-cell {
 }
 
 ::ng-deep.filter-priority {
-  .mat-form-field {
-    .mat-select-arrow,
-    .mat-form-field-label,
-    .mat-select-value,
-    .mat-select,
-    .mat-input-element {
+  .mat-mdc-form-field {
+    .mat-mdc-select-arrow,
+    .mat-mdc-form-field-label,
+    .mat-mdc-select-value,
+    .mat-mdc-select,
+    .mat-mdc-input-element {
       color: $dirty-blue !important;
       caret-color: $dirty-blue !important;
     }
 
-    .mat-form-field-underline {
+    .mat-mdc-form-field-underline {
       background-color: $dirty-blue !important;
     }
   }
@@ -311,32 +315,32 @@ mat-header-cell {
   background-color: $white-blue !important;
   text-transform: capitalize;
 
-  .mat-tab-labels {
+  .mat-mdc-tab-labels {
     display: flex;
     padding: 0 5px;
   }
 
-  .mat-tab-label,
-  .mat-tab-link {
-    &.mat-tab-label-active {
+  .mat-mdc-tab-label,
+  .mat-mdc-tab-link {
+    &.mat-mdc-tab-label-active {
       color: $purple;
     }
 
     color: $text-color;
     opacity: 1;
 
-    .mat-tab-label-content {
+    .mat-mdc-tab-label-content {
       font-weight: 700;
       text-transform: capitalize;
     }
   }
 
-  .mat-ink-bar {
+  .mat-mdc-ink-bar {
     background-color: $purple !important;
     height: 4px !important;
   }
 
-  .mat-tab-label {
+  .mat-mdc-tab-label {
     height: 38px;
     padding: 0 24px;
     cursor: pointer;
@@ -351,33 +355,33 @@ mat-header-cell {
     position: relative;
   }
 
-  .mat-tab-body-content {
+  .mat-mdc-tab-body-content {
     min-height: 120px;
     padding-bottom: 5px;
   }
 
-  .mat-tab-disabled .mat-tab-label-content {
+  .mat-mdc-tab-disabled .mat-mdc-tab-label-content {
     opacity: 0.5;
   }
 }
 
 .pagin-color {
   ::ng-deep {
-    .mat-paginator-range-label {
+    .mat-mdc-paginator-range-label {
       margin: 0 1px 0 1px !important;
     }
 
-    .mat-paginator-container {
+    .mat-mdc-paginator-container {
       justify-content: space-around !important;
     }
 
-    .mat-paginator-page-size {
+    .mat-mdc-paginator-page-size {
       margin-right: 0 !important;
     }
   }
 }
 
-.mat-expansion-panel {
+.mat-mdc-expansion-panel {
   background-color: $white-transparenter;
   transition: background-color 0.6s;
 
@@ -385,7 +389,7 @@ mat-header-cell {
     min-height: 55px;
 
     &:hover {
-      .mat-expansion-indicator::after {
+      .mat-mdc-expansion-indicator::after {
         color: $white;
       }
     }
@@ -406,7 +410,7 @@ mat-header-cell {
       }
     }
 
-    .mat-expansion-indicator {
+    .mat-mdc-expansion-indicator {
       margin-top: -1px;
 
       &::after {
@@ -423,21 +427,21 @@ mat-header-cell {
   }
 }
 
-.mat-snack-bar-container {
+.mat-mdc-snack-bar-container {
   &.success {
     background-color: #a8e68e;
     color: #13270a;
 
-    .mat-simple-snackbar-action {
+    .mat-mdc-simple-snackbar-action {
       color: #0c4005;
     }
   }
 }
 
-.mat-select-panel-wrap {
+.mat-mdc-select-panel-wrap {
   max-width: calc(100% - 32px);
 
-  .mat-select-panel {
+  .mat-mdc-select-panel {
     max-height: 350px;
     height: auto;
     width: 100%;
@@ -446,19 +450,19 @@ mat-header-cell {
 }
 
 .expansion-panel-highlighted {
-  .mat-expansion-panel-header {
+  .mat-mdc-expansion-panel-header {
     background-color: $white-transparent-05;
 
     &:hover,
-    &.mat-expanded:focus,
-    &.mat-expanded:hover {
+    &.mat-mdc-expanded:focus,
+    &.mat-mdc-expanded:hover {
       background: $white-transparent-05 !important;
     }
   }
 }
 
 .item-selection-tabs {
-  .mat-tab-label {
+  .mat-mdc-tab-label {
     color: $white;
     border-bottom: $blue-purple;
 
@@ -473,13 +477,13 @@ mat-header-cell {
     display: none;
   }
 
-  .mat-tab-disabled {
+  .mat-mdc-tab-disabled {
     color: $white-transparent-5;
   }
 }
 
 .left-list {
-  ::ng-deep .mat-content {
+  ::ng-deep .mat-mdc-content {
     flex: 1 !important;
   }
 }

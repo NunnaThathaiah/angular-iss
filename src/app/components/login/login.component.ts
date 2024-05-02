@@ -3,9 +3,6 @@ import { HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { DataService } from '../../services/data.service';
 import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
-import { Observable } from 'rxjs';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
