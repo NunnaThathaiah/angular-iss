@@ -6,6 +6,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { SystemResourcesComponent } from './components/system-resources/system-resources.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/login', pathMatch: 'full' }, // Redirect root URL to login
   { path: 'login', component: LoginPageComponent },
   {
     path: '',
@@ -15,7 +16,7 @@ const routes: Routes = [
       { path: 'system-resources', component: SystemResourcesComponent },
     ]
   },
-  { path: '', redirectTo: '/login', pathMatch: 'full' } // Default route
+  { path: '**', redirectTo: '/login' }
 ];
 
 @NgModule({
