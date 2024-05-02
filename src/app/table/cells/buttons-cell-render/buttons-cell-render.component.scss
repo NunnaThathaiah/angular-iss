@@ -1,0 +1,57 @@
+@import 'colors';
+
+:host {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.action {
+  display: flex;
+
+  &:not(:last-child) {
+    margin-right: 5px;
+  }
+
+  &-buttons {
+    cursor: pointer;
+    border: none;
+    background: 0 0;
+    min-width: max-content;
+
+    &:disabled {
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    &:hover .action-icon {
+      color: $purple;
+    }
+  }
+
+  &-button {
+    margin: 0;
+    padding: 10px;
+    min-width: 100px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    cursor: pointer;
+    background-color: $text-color;
+    color: $white;
+    line-height: 13px;
+
+    &:hover {
+      background-color: $purple;
+    }
+  }
+
+  &-icon {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    color: $text-color;
+    transition: all 0.3s;
+  }
+}

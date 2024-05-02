@@ -4,35 +4,54 @@
 
 <div class="main">
     <div class="page-header">
-        <h2>User Configuration</h2>
-        <div class="buttons">
-            <button class="button" id="settings">Global User Settings</button>
-            <button class="button" id="lockout-settings">Lockout Settings</button>
-            <button class="button" id="release-lockout">Release Lockout</button>
-            <button mat-raised-button (click)="openDialog()">New User</button>
-            <button mat-raised-button (click)="openDialog()">Modify</button>
-            <button class="button" id="deleteButton">Delete</button>
-        </div>
+        <h2 class="mat-expansion-panel-header-title">User Configuration</h2>
     </div>
 
     <!-- ERROR_MESSAGE Placeholder -->
-    
-    <table class="usernames policy-table table-align-left table-styles">
-        <thead>
-            <tr>
-                <th class="select-all width-20px"><input id="select-all" name="checkbox" type="checkbox"/>ID</th>
-                <th class="width-150px">Username</th>
-                <th class="width-170px">Last Password Changed Date</th>
-                <th class="width-170px">Days until Password Expires</th>
-                <th class="width-150px">Maximum Login Attempts</th>
-                <th class="width-150px">Lockout Time</th>
-                <th>Member Of</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Angular data binding will go here -->
-        </tbody>
-    </table>
 
-    <div id="confirm-dialog"></div>
+    <!-- <ng-container nvcTableWithConfig="users">
+        <div class="user-management-users__actions-toolbar">
+          <div class="table-actions">
+          </div>
+        </div>
+        <div class="table-wrapper">
+          <ag-grid-angular
+            niagaraTableScrollOnResize
+            domLayout="autoHeight"
+            class="ag-theme-alpine red-errors-form"
+            (gridReady)="onGridReady($event)"
+            [tooltipShowDelay]="200"
+            [columnDefs]="colDefs"
+            [defaultColDef]="defaultColDef"
+            [rowData]="tableData"
+            [getRowId]="getRowId"
+          ></ag-grid-angular>
+        </div>
+      </ng-container> -->
+    <div class="table-wrapper">
+        <div class="buttons float-right margin-top-20px margin-bottom-20px">
+            <button class="nvc-btn primary margin-left-10px " id="settings">Global User Settings</button>
+            <button class="nvc-btn primary margin-left-10px " id="lockout-settings">Lockout Settings</button>
+            <button class="nvc-btn primary margin-left-10px " id="release-lockout">Release Lockout</button>
+            <button class="nvc-btn primary margin-left-10px " mat-raised-button (click)="openDialog()">New User</button>
+            <button class="nvc-btn primary margin-left-10px " mat-raised-button (click)="openDialog()">Modify</button>
+            <button class="nvc-btn primary margin-left-10px " id="deleteButton">Delete</button>
+        </div>
+        <table class="usernames table table-hover">
+            <thead>
+                <tr>
+                    <th class="select-all" ><input id="select-all" name="checkbox" type="checkbox"/>ID</th>
+                    <th>Username</th>
+                    <th >Last Password Changed Date</th>
+                    <th>Days until Password Expires</th>
+                    <th>Maximum Login Attempts</th>
+                    <th>Lockout Time</th>
+                    <th>Member Of</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Angular data binding will go here -->
+            </tbody>
+        </table>
+    </div>
 </div>

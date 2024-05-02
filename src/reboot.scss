@@ -36,9 +36,9 @@ span.basic {
   right: 50%;
 }
 
-input {
-  -webkit-appearance: none !important;
-}
+// input {
+//   -webkit-appearance: none !important;
+// }
 
 /* Spin Buttons modified */
 input[type='number']::-webkit-outer-spin-button,
@@ -64,10 +64,10 @@ select {
   background-repeat: no-repeat;
 }
 
-input,
-button {
-  outline: none !important;
-}
+// input,
+// button {
+//   outline: none !important;
+// }
 
 input:focus,
 select:focus,

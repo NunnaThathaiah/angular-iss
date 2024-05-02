@@ -1,6 +1,6 @@
 {
     "/pm": {
-      "target": "http://localhost",
+      "target": "http://172.17.0.2",
       "secure": false,
       "changeOrigin": true,
       "logLevel": "debug"

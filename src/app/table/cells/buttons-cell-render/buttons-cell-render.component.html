@@ -1,0 +1,10 @@
+<div class="action" *ngFor="let button of buttons">
+  <div [ngbTooltip]="button.tooltip">
+    <button class="action-buttons" [disabled]="button.disabled" (click)="button.onClick(rowNode)">
+      <span *ngIf="button.icon" class="action-icon {{ button.icon }}" container="body"></span>
+      <div *ngIf="button.label" class="action-button">
+        {{ button.label }}
+      </div>
+    </button>
+  </div>
+</div>

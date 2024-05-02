@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.error {
+  width: 400px;
+  padding-left: 5px;
+  padding-bottom: 24px;
+  line-height: normal;
+}
+
+/* TODO(mdc-migration): The following rule targets internal classes of form-field that may no longer apply for the MDC version. */
+/* TODO(mdc-migration): The following rule targets internal classes of form-field that may no longer apply for the MDC version. */
+::ng-deep .input-field .mat-form-field-infix {
+  border-top: 4px solid transparent;
+}
+
+.input-field {
+  margin-top: 10px;
+}

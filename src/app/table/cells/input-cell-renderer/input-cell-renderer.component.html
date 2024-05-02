@@ -1,0 +1,43 @@
+<ng-container [ngSwitch]="inputType">
+  <mat-checkbox
+    *ngSwitchCase="InputType.Checkbox"
+    [checked]="value"
+    [disabled]="disabled"
+    [ngModel]="value"
+    (ngModelChange)="onValueChange($event)"
+  >
+    ({{ value ? 'enabled' : 'disabled' }})
+  </mat-checkbox>
+
+  <mat-radio-group
+    *ngSwitchCase="InputType.RadioButton"
+    [ngModel]="value"
+    (ngModelChange)="onValueChange($event)"
+    [disabled]="disabled"
+    aria-label="Select an option"
+  >
+    <mat-radio-button *ngFor="let value of possibleValues" [value]="value">{{ value }}</mat-radio-button>
+  </mat-radio-group>
+
+  <mat-form-field *ngSwitchDefault [class.mat-form-field-invalid]="validationErrors?.length" class="input-field">
+    <input
+      matInput
+      min="0"
+      [value]="value"
+      [type]="inputType"
+      [disabled]="disabled"
+      (keyup)="$event.stopPropagation()"
+      (keydown)="$event.stopPropagation()"
+      (keydown.e)="$event.preventDefault()"
+      [ngModel]="value"
+      (ngModelChange)="onValueChange($event)"
+      (keypress)="onKeyPress($event)"
+    />
+
+    <span matSuffix>{{ unit }}</span>
+  </mat-form-field>
+
+  <mat-error *ngFor="let error of validationErrors" class="error">
+    {{ error }}
+  </mat-error>
+</ng-container>

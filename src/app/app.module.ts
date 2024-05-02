@@ -4,7 +4,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 
-import { MatFormFieldControl, MatFormFieldModule } from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { AgGridModule } from 'ag-grid-angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginPageComponent } from './components/login/login.component';
@@ -50,7 +51,8 @@ import { SystemResourcesComponent } from './components/system-resources/system-r
     MatInputModule,
     MatIconModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    AgGridModule
   ],
   providers: [
     provideClientHydration(),
