@@ -23,7 +23,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { SystemResourcesComponent } from './components/system-resources/system-resources.component';
-
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { SystemResourcesComponent } from './components/system-resources/system-r
     UserConfigComponent,
     UserDialogComponent,
     LayoutComponent,
-    SystemResourcesComponent,
+    SystemResourcesComponent
   ],
   imports: [
     BrowserModule,
@@ -49,10 +50,11 @@ import { SystemResourcesComponent } from './components/system-resources/system-r
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatIconModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    AgGridModule
+    AgGridModule,
+    MatMenuModule,
+    MatButtonModule
   ],
   providers: [
     provideClientHydration(),

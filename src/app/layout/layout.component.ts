@@ -14,7 +14,7 @@ export class LayoutComponent {
     return this.router.url === route;
   }
 
-  navigate(item: string) {
+  navigateTo(item: string) {
     switch (item) {
       case 'user-config':
         this.router.navigate(['/user-config']);
