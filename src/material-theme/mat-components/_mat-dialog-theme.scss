@@ -1,0 +1,13 @@
+@use '../util/background.util' as bg;
+@use '../../../src/colors';
+
+// dialog close button (used in every component with the same class)
+mat-dialog-container {
+  .close {
+    margin-left: auto;
+  }
+}
+
+@include bg.light {
+  color: colors.$text-color;
+}

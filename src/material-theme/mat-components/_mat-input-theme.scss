@@ -1,0 +1,5 @@
+@use '@angular/material' as mat;
+@use '../niagara-theme/niagara-theme-white' as whiteTheme;
+@use '../util/background.util' as bg;
+
+@include mat.input-theme(whiteTheme.$niagara-theme-white);

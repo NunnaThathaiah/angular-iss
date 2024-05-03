@@ -1,0 +1,26 @@
+@use '@angular/material' as mat;
+@use '../niagara-theme/niagara-theme-white' as whiteTheme;
+@use '../niagara-theme/niagara-theme-dark' as darkTheme;
+@use '../util/background.util' as bg;
+@use '../../../src/colors';
+
+@include mat.radio-theme(whiteTheme.$niagara-theme-white);
+
+@mixin radio-color($color) {
+  .mat-mdc-radio-button.mat-accent {
+    --mat-radio-checked-ripple-color: #{$color};
+    --mdc-radio-unselected-hover-icon-color: #{$color};
+    --mdc-radio-selected-icon-color: #{$color};
+    --mdc-radio-unselected-focus-icon-color: #{$color};
+  }
+}
+
+@include bg.default {
+  @include radio-color(white);
+}
+
+@include bg.light {
+  @include mat.radio-color(darkTheme.$niagara-theme-dark);
+
+  @include radio-color(colors.$text-color);
+}

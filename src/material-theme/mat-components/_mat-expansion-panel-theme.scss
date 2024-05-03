@@ -1,0 +1,39 @@
+@use '@angular/material' as mat;
+@use '../niagara-theme/niagara-theme-white' as whiteTheme;
+@use '../util/background.util' as bg;
+@import '../../../src/colors';
+
+@include mat.expansion-theme(whiteTheme.$niagara-theme-white);
+
+@include bg.default {
+  --mat-expansion-container-background-color: #{$white-transparenter};
+}
+
+mat-expansion-panel.sidebar-expansion {
+  margin-top: 10px;
+  --mat-expansion-container-shape: 0;
+  --mat-expansion-header-indicator-color: #{$glow-cyan};
+  --mat-expansion-header-expanded-state-height: 40px;
+  --mat-expansion-header-collapsed-state-height: 40px;
+  --mat-expansion-container-background-color: transparent;
+
+  .mat-expansion-panel-header {
+    background-color: $white-transparenter;
+
+    .active {
+      font-weight: bold;
+    }
+
+    &:focus {
+      background-color: $white-transparenter;
+    }
+
+    &:hover {
+      background: $white-transparent-05;
+    }
+  }
+
+  .mat-expansion-panel-body {
+    padding: 5px 0;
+  }
+}

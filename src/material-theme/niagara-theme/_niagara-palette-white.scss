@@ -1,0 +1,86 @@
+@use '../../../src/colors';
+
+$white-palette-bg: white;
+
+/*
+ The colors here doesn't simply refer to text and background.
+ Material uses the palettes according to their internal design and may even arbitrary change (e.g. transparentize or mix) the colors from the palette.
+ Setting the palette colors to transparent and white here to later override them separately for specific use-cases.
+ */
+
+$white-palette-text: colors.$text-color;
+
+// todo: consider adding the white-gray tones to the palette
+$white-palette: (
+  50: $white-palette-bg,
+  100: $white-palette-bg,
+  200: $white-palette-bg,
+  300: $white-palette-bg,
+  400: $white-palette-bg,
+  500: $white-palette-bg,
+  600: $white-palette-bg,
+  700: $white-palette-bg,
+  800: $white-palette-bg,
+  900: $white-palette-bg,
+  A100: $white-palette-bg,
+  A200: $white-palette-bg,
+  A400: $white-palette-bg,
+  A700: $white-palette-bg,
+  contrast: (
+    50: $white-palette-text,
+    100: $white-palette-text,
+    200: $white-palette-text,
+    300: $white-palette-text,
+    400: $white-palette-text,
+    500: $white-palette-text,
+    600: $white-palette-text,
+    700: $white-palette-text,
+    800: $white-palette-text,
+    900: $white-palette-text,
+    A100: $white-palette-text,
+    A200: $white-palette-text,
+    A400: $white-palette-text,
+    A700: $white-palette-text,
+  ),
+);
+
+$default-background-color: transparent;
+$background-palette: (
+  status-bar: $default-background-color,
+  app-bar: $default-background-color,
+  background: $default-background-color,
+  hover: $default-background-color,
+  card: $default-background-color,
+  dialog: $default-background-color,
+  disabled-button: $default-background-color,
+  raised-button: $default-background-color,
+  focused-button: $default-background-color,
+  selected-button: $default-background-color,
+  selected-disabled-button: $default-background-color,
+  disabled-button-toggle: $default-background-color,
+  unselected-chip: $default-background-color,
+  disabled-list-option: $default-background-color,
+  tooltip: $default-background-color,
+);
+
+$light-secondary-text: white;
+$light-disabled-text: white;
+$light-dividers: white;
+
+$foreground-palette: (
+  base: white,
+  divider: $light-dividers,
+  dividers: $light-dividers,
+  disabled: $light-disabled-text,
+  disabled-button: white,
+  disabled-text: $light-disabled-text,
+  elevation: white,
+  hint-text: $light-disabled-text,
+  secondary-text: $light-secondary-text,
+  icon: white,
+  icons: white,
+  text: white,
+  slider-min: white,
+  slider-off: white,
+  slider-off-active: white,
+);

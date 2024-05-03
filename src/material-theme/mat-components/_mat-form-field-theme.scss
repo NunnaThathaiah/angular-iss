@@ -1,0 +1,63 @@
+@use '@angular/material' as mat;
+@use '../niagara-theme/niagara-theme-white' as whiteTheme;
+@use '../niagara-theme/niagara-theme-dark' as darkTheme;
+@use '../util/background.util' as bg;
+@use '../../../src/colors';
+
+@include mat.form-field-theme(whiteTheme.$niagara-theme-white);
+
+@mixin input-color($color) {
+  // bottom border of the input
+  --mdc-filled-text-field-active-indicator-color: #{$color};
+  --mdc-filled-text-field-hover-active-indicator-color: #{$color};
+  --mdc-filled-text-field-focus-active-indicator-color: #{$color};
+  --mdc-filled-text-field-disabled-active-indicator-color: #{transparentize($color, 0.4)};
+
+  // label color
+  --mdc-filled-text-field-label-text-color: #{$color};
+  --mdc-filled-text-field-hover-label-text-color: #{$color};
+  --mdc-filled-text-field-focus-label-text-color: #{$color};
+  --mdc-filled-text-field-disabled-label-text-color: #{transparentize($color, 0.4)};
+
+  // text color
+  --mdc-filled-text-field-input-text-color: #{$color};
+  --mdc-filled-text-field-disabled-input-text-color: #{transparentize($color, 0.4)};
+  --mdc-filled-text-field-input-text-placeholder-color: #{transparentize($color, 0.5)};
+  --mdc-filled-text-field-caret-color: #{$color};
+}
+
+mat-form-field {
+  &:not(.mat-form-field-appearance-outline) {
+    .mat-mdc-text-field-wrapper {
+      padding-left: 0;
+    }
+
+    .mat-mdc-form-field-error-wrapper {
+      padding-left: 0;
+    }
+  }
+}
+
+@include bg.default {
+  --mat-form-field-container-height: 30px;
+  --mat-form-field-container-vertical-padding: 0;
+  --mdc-filled-text-field-container-color: transparent;
+  --mat-form-field-state-layer-color: transparent;
+
+  @include input-color(white);
+
+  // mat-error font-size
+  --mat-form-field-subscript-text-size: 10px;
+
+  // label position
+  --mat-form-field-filled-with-label-container-padding-top: 14px;
+  --mat-form-field-filled-with-label-container-padding-bottom: 6px;
+
+  // border-radius
+  --mdc-filled-text-field-container-shape: 0;
+}
+
+@include bg.light {
+  //@include mat.form-field-color(darkTheme.$niagara-theme-dark);
+  @include input-color(colors.$text-color);
+}

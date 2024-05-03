@@ -101,6 +101,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 @import 'bootstrap/dist/css/bootstrap.min.css';
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import 'material-theme/niagara-material';
 
 @import 'reboot';
 @import 'main';
@@ -111,6 +112,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 @import 'tooltip';
 @import 'mat-inputs';
 @import 'modals';
+@import 'colors';
 
 .mdc-text-field--filled:not(.mdc-text-field--disabled) {
   background: none !important;

@@ -1,0 +1,21 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use '../util/theme.util' as util;
+@use 'niagara-palette-white' as palette;
+@use 'common-niagara-palette' as commonPalette;
+
+// default bg
+$niagara-theme-white: util.define-theme(
+  (
+    color: (
+      primary: mat.define-palette(palette.$white-palette),
+      accent: mat.define-palette(palette.$white-palette),
+      warn: mat.define-palette(commonPalette.$niagara-warn-palette),
+    ),
+    density: (
+      -2,
+    ),
+  ),
+  palette.$foreground-palette,
+  palette.$background-palette
+);

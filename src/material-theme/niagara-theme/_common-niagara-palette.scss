@@ -1,0 +1,4 @@
+@use '@angular/material' as mat;
+
+// Red palette. Reusing the material one but can redefined here if necessary
+$niagara-warn-palette: mat.$red-palette;

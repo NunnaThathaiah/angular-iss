@@ -1,0 +1,43 @@
+@use '@angular/material' as mat;
+@use '../niagara-theme/niagara-theme-white' as whiteTheme;
+@use '../niagara-theme/niagara-theme-dark' as darkTheme;
+@use '../util/background.util' as bg;
+@use '../../../src/colors';
+
+@include mat.select-theme(whiteTheme.$niagara-theme-white);
+
+@include bg.default {
+  /**
+    * The styles below apply to both dark and white themes as the selection dropdown always has a white background
+    */
+
+  // dropdown panel
+  --mat-select-panel-background-color: white;
+
+  // option bg
+  --mat-option-hover-state-layer-color: rgba(0, 0, 0, 0.04);
+  --mat-option-focus-state-layer-color: transparent;
+  --mat-option-selected-state-layer-color: rgba(0, 0, 0, 0.12);
+
+  // text color
+  --mat-option-selected-state-label-text-color: #{colors.$text-color};
+  --mat-option-label-text-color: #{colors.$text-color};
+
+  // pseudo-checkbox
+  // todo: check the colors
+  .mat-primary {
+    --mat-full-pseudo-checkbox-selected-icon-color: #{colors.$text-color};
+    --mat-full-pseudo-checkbox-selected-checkmark-color: rgba(0, 0, 0, 0);
+    --mat-full-pseudo-checkbox-unselected-icon-color: transparent;
+    --mat-full-pseudo-checkbox-disabled-selected-checkmark-color: rgba(0, 0, 0, 0);
+    --mat-full-pseudo-checkbox-disabled-unselected-icon-color: #686868;
+    --mat-full-pseudo-checkbox-disabled-selected-icon-color: #686868;
+    --mat-minimal-pseudo-checkbox-selected-checkmark-color: #{colors.$text-color};
+    --mat-minimal-pseudo-checkbox-disabled-selected-checkmark-color: #686868;
+  }
+}
+
+@include bg.light {
+  @include mat.select-color(darkTheme.$niagara-theme-dark);
+  @include mat.option-color(darkTheme.$niagara-theme-dark);
+}

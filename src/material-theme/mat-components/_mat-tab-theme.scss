@@ -1,0 +1,10 @@
+@use '@angular/material' as mat;
+@use '../niagara-theme/niagara-theme-white' as whiteTheme;
+@use '../niagara-theme/niagara-theme-dark' as darkTheme;
+@use '../util/background.util' as bg;
+
+@include mat.tabs-theme(whiteTheme.$niagara-theme-white);
+
+@include bg.light {
+  @include mat.tabs-color(darkTheme.$niagara-theme-dark);
+}

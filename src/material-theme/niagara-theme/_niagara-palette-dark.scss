@@ -1,0 +1,78 @@
+@use '@angular/material' as mat;
+@use '../../../src/colors';
+
+$dark-palette-bg: colors.$text-color;
+$dark-palette-contrast: white;
+$dark-palette: (
+  50: $dark-palette-bg,
+  100: $dark-palette-bg,
+  200: $dark-palette-bg,
+  300: $dark-palette-bg,
+  400: $dark-palette-bg,
+  500: $dark-palette-bg,
+  600: $dark-palette-bg,
+  700: $dark-palette-bg,
+  800: $dark-palette-bg,
+  900: $dark-palette-bg,
+  A100: $dark-palette-bg,
+  A200: $dark-palette-bg,
+  A400: $dark-palette-bg,
+  A700: $dark-palette-bg,
+  contrast: (
+    50: $dark-palette-contrast,
+    100: $dark-palette-contrast,
+    200: $dark-palette-contrast,
+    300: $dark-palette-contrast,
+    400: $dark-palette-contrast,
+    500: $dark-palette-contrast,
+    600: $dark-palette-contrast,
+    700: $dark-palette-contrast,
+    800: $dark-palette-contrast,
+    900: $dark-palette-contrast,
+    A100: $dark-palette-contrast,
+    A200: $dark-palette-contrast,
+    A400: $dark-palette-contrast,
+    A700: $dark-palette-contrast,
+  ),
+);
+
+$default-background-color-dark: colors.$text-color;
+$background-palette-dark: (
+  status-bar: $default-background-color-dark,
+  app-bar: $default-background-color-dark,
+  background: $default-background-color-dark,
+  hover: $default-background-color-dark,
+  card: $default-background-color-dark,
+  dialog: $default-background-color-dark,
+  disabled-button: $default-background-color-dark,
+  raised-button: $default-background-color-dark,
+  focused-button: $default-background-color-dark,
+  selected-button: $default-background-color-dark,
+  selected-disabled-button: $default-background-color-dark,
+  disabled-button-toggle: $default-background-color-dark,
+  unselected-chip: $default-background-color-dark,
+  disabled-list-option: $default-background-color-dark,
+  tooltip: $default-background-color-dark,
+);
+
+$light-secondary-text: colors.$text-color;
+$light-disabled-text: colors.$text-color;
+$light-dividers: colors.$text-color;
+
+$foreground-palette: (
+  base: colors.$text-color,
+  divider: $light-dividers,
+  dividers: $light-dividers,
+  disabled: $light-disabled-text,
+  disabled-button: colors.$text-color,
+  disabled-text: $light-disabled-text,
+  elevation: colors.$text-color,
+  hint-text: $light-disabled-text,
+  secondary-text: $light-secondary-text,
+  icon: colors.$text-color,
+  icons: colors.$text-color,
+  text: colors.$text-color,
+  slider-min: colors.$text-color,
+  slider-off: colors.$text-color,
+  slider-off-active: colors.$text-color,
+);

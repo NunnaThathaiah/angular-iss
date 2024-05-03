@@ -1,0 +1,20 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use '../util/theme.util' as util;
+@use 'niagara-palette-dark' as palette;
+@use 'common-niagara-palette' as commonPalette;
+
+$niagara-theme-dark: util.define-theme(
+  (
+    color: (
+      primary: mat.define-palette(palette.$dark-palette),
+      accent: mat.define-palette(palette.$dark-palette),
+      warn: mat.define-palette(commonPalette.$niagara-warn-palette),
+    ),
+    density: (
+      -2,
+    ),
+  ),
+  palette.$foreground-palette,
+  palette.$background-palette-dark
+);

@@ -1,0 +1,32 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@function define-theme($primary, $foreground, $background) {
+  $result: $primary;
+
+  $color-settings: map.get($primary, color);
+  $primary: map.get($color-settings, primary);
+  $accent: map.get($color-settings, accent);
+  $warn: map.get($color-settings, warn);
+  $result: map.merge(
+    $result,
+    (
+      color: create-color-config($primary, $accent, $warn, $foreground, $background),
+    )
+  );
+
+  @return $result;
+}
+
+// Creates a color configuration from the specified
+// primary, accent and warn palettes.
+@function create-color-config($primary, $accent, $warn: null, $foreground, $background) {
+  @return (
+    primary: $primary,
+    accent: $accent,
+    warn: if($warn != null, $warn, mat.define-palette(mat.$red-palette)),
+    is-dark: true,
+    foreground: $foreground,
+    background: $background
+  );
+}

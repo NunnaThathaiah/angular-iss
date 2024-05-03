@@ -1,0 +1,18 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use 'niagara-theme/niagara-theme-white' as niagaraWhite;
+
+@include mat.core;
+@include mat.core-theme(niagaraWhite.$niagara-theme-white);
+
+/**
+There are 2 Niagara theme variations:
+  - White - the default one, used everywhere across the apps. It's designed to use on a dark background (default one).
+  It has white outlines and text.
+  - Dark - the one to be used on light backgrounds (e.g. in dialogs). It has dark-blue outlines and text color (colors.$text-color).
+*/
+
+// We're not including all-components theme. We include it for every component separately.
+// @include mat.all-component-themes(niagara.$niagara-theme);
+
+@import 'all-mat-components';
