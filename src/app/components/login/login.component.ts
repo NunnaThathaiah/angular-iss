@@ -30,6 +30,11 @@ export class LoginPageComponent {
     console.log(`url request ${url}`);
     this.dataService.create(url, data, { headers, observe: 'response', withCredentials: true}).subscribe(
       (response) => {
+        console.log(response.body)
+          // Extract the gambitCookie from the response
+        const gambitCookie = response.body.response.webObjects[0].gambitCookie;
+        console.log(gambitCookie)
+        document.cookie = `GAMBIT=${gambitCookie};`;
         // Handle successful login response
         console.log('Login successful');
         this.router.navigate(['/user-config']);
