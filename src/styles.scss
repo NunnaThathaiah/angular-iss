@@ -157,6 +157,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   padding: unset !important;
 }
 
-.login-container .mat-mdc-text-field-wrapper  {
+.login-container .mat-mdc-text-field-wrapper, .modal-body .mat-mdc-text-field-wrapper {
   --mat-form-field-container-height: 40px !important;
 }
