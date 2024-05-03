@@ -25,6 +25,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { SystemResourcesComponent } from './components/system-resources/system-resources.component';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 
 @NgModule({
   declarations: [
@@ -54,7 +56,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatToolbarModule,
     AgGridModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    MatExpansionModule
   ],
   providers: [
     provideClientHydration(),

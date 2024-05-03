@@ -130,3 +130,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mdc-text-field__input {
   color: white !important;
 }
+
+.header-breadcrumbs{
+  color: $white;
+  font-size: 14px;
+  display: flex;
+  height: 35px;
+  align-items: center;
+
+  &-item {
+    margin-right: 3px;
+  }
+}
+
+.mat-expansion-panel{
+  background: #ffffff1a;
+}

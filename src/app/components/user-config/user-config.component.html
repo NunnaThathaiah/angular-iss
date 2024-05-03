@@ -1,11 +1,46 @@
 <!-- <div>
     <img src="/images/loading.gif" width="1" height="1" />
 </div> -->
-
-<div class="main">
-    <div class="page-header">
-        <h2 class="mat-expansion-panel-header-title">User Configuration</h2>
+<div  class="header-breadcrumbs">
+  <div class="header-breadcrumbs-item">
+    <span>User</span>
+    <span> > </span>
+    <span>User Configuration</span>
+  </div>
+</div>
+<mat-expansion-panel class="expansion-panel-highlighted" >
+  <mat-expansion-panel-header>
+    <mat-panel-title class="mat-expansion-panel-header-title mat-expansion-panel-header-title--big">
+      <span class="mat-expansion-panel-header-title-icon nvc-icon-user-circle">User Configuration</span>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <div class="table-wrapper">
+    <div class="buttons float-right margin-top-20px margin-bottom-20px">
+        <button class="nvc-btn primary margin-left-10px " id="settings">Global User Settings</button>
+        <button class="nvc-btn primary margin-left-10px " id="lockout-settings">Lockout Settings</button>
+        <button class="nvc-btn primary margin-left-10px " id="release-lockout">Release Lockout</button>
+        <button class="nvc-btn primary margin-left-10px " mat-raised-button (click)="openDialog()">New User</button>
+        <button class="nvc-btn primary margin-left-10px " mat-raised-button (click)="openDialog()">Modify</button>
+        <button class="nvc-btn primary margin-left-10px " id="deleteButton">Delete</button>
     </div>
+    <table class="usernames table table-hover">
+        <thead>
+            <tr>
+                <th class="select-all" ><input id="select-all" name="checkbox" type="checkbox"/>ID</th>
+                <th>Username</th>
+                <th >Last Password Changed Date</th>
+                <th>Days until Password Expires</th>
+                <th>Maximum Login Attempts</th>
+                <th>Lockout Time</th>
+                <th>Member Of</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Angular data binding will go here -->
+        </tbody>
+    </table>
+</div>
+</mat-expansion-panel>
 
     <!-- ERROR_MESSAGE Placeholder -->
 
@@ -28,30 +63,5 @@
           ></ag-grid-angular>
         </div>
       </ng-container> -->
-    <div class="table-wrapper">
-        <div class="buttons float-right margin-top-20px margin-bottom-20px">
-            <button class="nvc-btn primary margin-left-10px " id="settings">Global User Settings</button>
-            <button class="nvc-btn primary margin-left-10px " id="lockout-settings">Lockout Settings</button>
-            <button class="nvc-btn primary margin-left-10px " id="release-lockout">Release Lockout</button>
-            <button class="nvc-btn primary margin-left-10px " mat-raised-button (click)="openDialog()">New User</button>
-            <button class="nvc-btn primary margin-left-10px " mat-raised-button (click)="openDialog()">Modify</button>
-            <button class="nvc-btn primary margin-left-10px " id="deleteButton">Delete</button>
-        </div>
-        <table class="usernames table table-hover">
-            <thead>
-                <tr>
-                    <th class="select-all" ><input id="select-all" name="checkbox" type="checkbox"/>ID</th>
-                    <th>Username</th>
-                    <th >Last Password Changed Date</th>
-                    <th>Days until Password Expires</th>
-                    <th>Maximum Login Attempts</th>
-                    <th>Lockout Time</th>
-                    <th>Member Of</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Angular data binding will go here -->
-            </tbody>
-        </table>
-    </div>
-</div>
+
+
