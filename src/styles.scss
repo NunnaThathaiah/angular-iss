@@ -152,3 +152,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-expansion-panel-body {
   margin-top: 25px;
 }
+
+.mat-mdc-menu-content {
+  padding: unset !important;
+}
+
+.login-container .mat-mdc-text-field-wrapper  {
+  --mat-form-field-container-height: 40px !important;
+}

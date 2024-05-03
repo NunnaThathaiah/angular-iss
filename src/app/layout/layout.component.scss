@@ -53,10 +53,6 @@
     font-size: 30px;
     border-left: 1.5px solid #fff;
     margin-right: 5%;
-
-    .mat-mdc-menu-content {
-      padding: unset !important;
-    }
   }
 
   &-main-menu-title {
@@ -66,6 +62,8 @@
 }
 
 .button-menu-item {
+  color: $black;
+
   a {
     display: block;
     text-decoration: none;
