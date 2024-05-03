@@ -41,12 +41,29 @@
     .mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-floating-label--float-above,
     .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-floating-label,
     .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-floating-label--float-above{
-      border-bottom-color: #6fe8cf !important;;
+      border-bottom-color: $glow-cyan !important;;
     }
 
     .mdc-line-ripple::before,
     .mdc-line-ripple::after {
       margin-left: 20%;
+    }
+
+    .mdc-text-field__input {
+      color: $white !important;
+    }
+
+    .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+      background: none !important;
+    }
+
+    .mat-mdc-form-field-focus-overlay {
+      background: none !important;
+    }
+
+    .login-error {
+      color: red;
+      text-align: center;
     }
   }
 }

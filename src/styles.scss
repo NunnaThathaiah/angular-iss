@@ -114,18 +114,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 @import 'modals';
 @import 'colors';
 
-.mdc-text-field--filled:not(.mdc-text-field--disabled) {
-  background: none !important;
-}
-
-.mat-mdc-form-field-focus-overlay {
-  background: none !important;
-}
-
-.mdc-text-field__input {
-  color: white !important;
-}
-
 .header-breadcrumbs{
   color: $white;
   font-size: 14px;

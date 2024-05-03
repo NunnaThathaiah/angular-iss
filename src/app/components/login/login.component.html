@@ -26,7 +26,7 @@
           <button class="nvc-btn outlined secondary" type="submit" data-cy="login-button"
             [disabled]="loginForm.invalid">Login</button>
         </form>
-        <p *ngIf="error" style="color: red;">{{ error }}</p>
+        <p *ngIf="error" class="login-error">{{ error }}</p>
       </div>
     </div>
   </div>
