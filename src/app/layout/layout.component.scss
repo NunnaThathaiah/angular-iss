@@ -1,32 +1,81 @@
-.toolbar-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+@import '../../colors';
+
+.header {
+  padding: 0 15px;
+  height: 105px;
+
+  &-nav {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-container {
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+  }
+
+  &-user {
+    &-profile {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &-user-name {
+    margin-right: 10px;
+  }
+
+  &-logo {
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 192px;
+    height: 27px;
+    margin-right: 30px;
+  }
+
+  &-logout {
+    border-left: 1.5px solid white;
+    padding-left: 10px;
+    color: $text-link-blue;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  &-left-side {
+    display: flex;
+    align-items: center;
+  }
+
+  &-main-menu-item {
+    font-size: 30px;
+    border-left: 1.5px solid #fff;
+    margin-right: 5%;
+
+    .mat-mdc-menu-content {
+      padding: unset !important;
+    }
+  }
+
+  &-main-menu-title {
+    color: #fff !important;
+    padding-left: 2%;
+  }
 }
 
-.menu-icon {
-  flex: 0 0 auto; // Fixed size for the menu icon
-}
+.button-menu-item {
+  a {
+    display: block;
+    text-decoration: none;
+  }
 
-.title {
-  flex: 1; // Take up remaining space in the middle
-  text-align: center; // Center the text
-}
-
-.spacer {
-  flex: 0 0 auto; // Fixed size for the spacer
-}
-
-.mat-sidenav {
-  height: 100%;
-  color: #fff !important;
-  background-color: transparent;
-}
-
-.active {
-  background-color: #1ce9bf4d;
-  color: #fff !important;
+  &:hover {
+    border-bottom: 1.5px solid $purple;
+    color: $purple;
+    text-decoration: none;
+  }
 }
 
 .mat-toolbar {

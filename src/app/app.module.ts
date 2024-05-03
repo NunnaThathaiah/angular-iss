@@ -23,7 +23,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { SystemResourcesComponent } from './components/system-resources/system-resources.component';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
 import {MatExpansionModule} from '@angular/material/expansion';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +37,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     UserConfigComponent,
     UserDialogComponent,
     LayoutComponent,
-    SystemResourcesComponent,
+    SystemResourcesComponent
   ],
   imports: [
     BrowserModule,
@@ -49,10 +52,11 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatIconModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     AgGridModule,
+    MatMenuModule,
+    MatButtonModule,
     MatExpansionModule
   ],
   providers: [
