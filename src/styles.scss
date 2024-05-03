@@ -139,7 +139,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   display: flex;
   height: 35px;
   align-items: center;
-
+  margin-bottom: 10px;
   &-item {
     margin-right: 3px;
   }
@@ -147,4 +147,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .mat-expansion-panel{
   background: #ffffff1a;
+}
+
+.mat-expansion-panel-body {
+  margin-top: 25px;
 }
