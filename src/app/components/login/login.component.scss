@@ -30,6 +30,24 @@
         box-shadow: inset 0 0 0 2px $glow-green !important;
       }
     }
+
+    .mdc-floating-label {
+      color: $glow-cyan !important;
+    }
+
+    .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before,
+    .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::after,
+    .mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-floating-label,
+    .mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-floating-label--float-above,
+    .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-floating-label,
+    .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-floating-label--float-above{
+      border-bottom-color: #6fe8cf !important;;
+    }
+
+    .mdc-line-ripple::before,
+    .mdc-line-ripple::after {
+      margin-left: 20%;
+    }
   }
 }
 
