@@ -23,7 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { SystemResourcesComponent } from './components/system-resources/system-resources.component';
-
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -52,7 +52,8 @@ import { SystemResourcesComponent } from './components/system-resources/system-r
     MatIconModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    AgGridModule
+    AgGridModule,
+    MatExpansionModule
   ],
   providers: [
     provideClientHydration(),
