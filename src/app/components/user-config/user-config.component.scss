@@ -1,3 +1,4 @@
+@import '../../../colors';
 .nvc-btn {
     margin-right: 5px;
   }
@@ -24,4 +25,25 @@ table th {
   width: 24px;
   height: 24px;
   margin-right: 30px;
+}
+
+.table-actions {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $white-blue;
+  padding: 0 30px 0;
+  margin-top: 25px;
+}
+
+.table-wrapper {
+  background-color: $white-blue;
+  padding: 0 30px 30px;
+  margin-bottom: 10px;
+
+  .ag-theme-alpine {
+    background-color: $white-blue;
+    text-align: center;
+  }
 }

@@ -98,7 +98,7 @@ export class UserConfigComponent implements OnInit {
       const row = document.createElement('tr');
       row.setAttribute('rel', userId);
       row.innerHTML = `
-        <td><input id="selectedUser" type="checkbox" name="selectedUser" value="${userId}"/>${userId}</td>
+        <td><input id="selectedUser" class="form-check-input" type="checkbox" name="selectedUser" value="${userId}"/>${userId}</td>
         <td>${username}</td>
         <td>${lastPasswordChangedDate}</td>
         <td>${daysForPasswordExpiry}</td>

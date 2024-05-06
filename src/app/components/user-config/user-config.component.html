@@ -14,19 +14,21 @@
       <span class="mat-expansion-panel-header-title-icon nvc-icon-user-circle"></span>Users
     </mat-panel-title>
   </mat-expansion-panel-header>
-  <div class="table-wrapper">
+  <div class="table-actions">
     <div class="buttons float-right margin-top-20px margin-bottom-20px">
-        <button class="nvc-btn primary margin-left-10px " id="settings">Global User Settings</button>
-        <button class="nvc-btn primary margin-left-10px " id="lockout-settings">Lockout Settings</button>
-        <button class="nvc-btn primary margin-left-10px " id="release-lockout">Release Lockout</button>
-        <button class="nvc-btn primary margin-left-10px " (click)="openDialog()">New User</button>
-        <button class="nvc-btn primary margin-left-10px " (click)="openDialog()">Modify</button>
-        <button class="nvc-btn primary margin-left-10px " id="deleteButton">Delete</button>
-    </div>
-    <table class="usernames table table-hover">
+      <button class="nvc-btn primary margin-left-10px " id="settings">Global User Settings</button>
+      <button class="nvc-btn primary margin-left-10px " id="lockout-settings">Lockout Settings</button>
+      <button class="nvc-btn primary margin-left-10px " id="release-lockout">Release Lockout</button>
+      <button class="nvc-btn primary margin-left-10px " (click)="openDialog()">New User</button>
+      <button class="nvc-btn primary margin-left-10px " (click)="openDialog()">Modify</button>
+      <button class="nvc-btn primary margin-left-10px " id="deleteButton">Delete</button>
+  </div>
+  </div>
+  <div class="table-wrapper">
+    <table class="usernames table table-hover ag-theme-alpine">
         <thead>
             <tr>
-                <th class="select-all" ><input id="select-all" name="checkbox" type="checkbox"/>ID</th>
+                <th class="select-all" ><input id="select-all" name="checkbox" type="checkbox" class="form-check-input"/>ID</th>
                 <th>Username</th>
                 <th >Last Password Changed Date</th>
                 <th>Days until Password Expires</th>
